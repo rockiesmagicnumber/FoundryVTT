@@ -81,12 +81,13 @@ var CharacterSheetApp = angular
                         if (!!response && !!response.saving_throws) {
                             classDetails = response;
                             classDetails.saving_throws.forEach(sv => {
-                                char.abilities[sv.index].savingThrow += getProfBonus(char.levels);
+                                char.abilities[sv.index].savingThrow += getProfBonus(char.level);
                             });
                         }
                     });
 
                     char.skills = myChar.data.skills; // there is seriously no point in reinventing THIS wheel
+                    char.passivePerception = 10 + char.abilities.wis.mod;
                     char.ac = myChar.data.attributes.ac;
                     char.initiative = myChar.data.attributes.init.mod;
                     char.speed = myChar.data.attributes.speed;
@@ -94,6 +95,9 @@ var CharacterSheetApp = angular
                     char.maxHp = myChar.data.attributes.hp.max;
                     char.hitDice = myChar.data.attributes.hd;
 
+                    // we're gonna be in a holding pattern over O'Hare for the time being; 
+                    //  we have a bit of traffic coming in to our scheduled runway. 
+                    //  we'll go ahead and finish populating the sheet once ground control gives us the all-clear
                     while (!classDetails) { continue; }
 
                     console.log(char);
