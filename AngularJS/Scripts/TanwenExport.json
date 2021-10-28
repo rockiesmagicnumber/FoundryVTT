@@ -59,7 +59,7 @@
         {
             "ac":
             {
-                "value": 15,
+                "value": 12,
                 "type": "Number",
                 "label": "Armor Class"
             },
@@ -122,7 +122,7 @@
         {
             "biography":
             {
-                "value": "<h1>Current Portent</h1>\n<table style=\"width: 22.9872%; height: 17px;\" border=\"1\">\n<tbody>\n<tr style=\"height: 17px;\">\n<td style=\"width: 48.2608%; text-align: center; height: 17px;\">14</td>\n<td style=\"width: 50.7311%; text-align: center; height: 17px;\">19</td>\n</tr>\n</tbody>\n</table>\n<h1>Sage</h1>\n<p>You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.</p>\n<h2>Researcher</h2>\n<p>When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign.</p>\n<h1>Traits</h1>\n<h2>Personality Traits</h2>\n<p>There&rsquo;s nothing I like more than a good mystery.</p>\n<p>I &hellip; speak &hellip; slowly &hellip; when talking &hellip; to idiots, &hellip; which &hellip; almost &hellip; everyone &hellip; is &hellip; compared &hellip; to me.</p>\n<h2>Ideals</h2>\n<p>Knowledge. The path to power and self-improvement is through knowledge. (Neutral)</p>\n<p>Power. Knowledge is the path to power and domination. (Evil)</p>\n<h2>Bonds</h2>\n<p>I sold my soul for knowledge. I hope to do great deeds and win it back.</p>\n<h2>Flaws</h2>\n<p>Most people scream and run when they see a demon. I stop and take notes on its anatomy.</p>",
+                "value": "<h1>Current Portent</h1>\n<table style=\"width: 22.9872%; height: 17px;\" border=\"1\">\n<tbody>\n<tr style=\"height: 17px;\">\n<td style=\"width: 48.2608%; text-align: center; height: 17px;\">7</td>\n<td style=\"width: 50.7311%; text-align: center; height: 17px;\">15</td>\n</tr>\n</tbody>\n</table>\n<h1>Sage</h1>\n<p>You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.</p>\n<h2>Researcher</h2>\n<p>When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign.</p>\n<h1>Traits</h1>\n<h2>Personality Traits</h2>\n<p>There&rsquo;s nothing I like more than a good mystery.</p>\n<p>I &hellip; speak &hellip; slowly &hellip; when talking &hellip; to idiots, &hellip; which &hellip; almost &hellip; everyone &hellip; is &hellip; compared &hellip; to me.</p>\n<h2>Ideals</h2>\n<p>Knowledge. The path to power and self-improvement is through knowledge. (Neutral)</p>\n<p>Power. Knowledge is the path to power and domination. (Evil)</p>\n<h2>Bonds</h2>\n<p>I sold my soul for knowledge. I hope to do great deeds and win it back.</p>\n<h2>Flaws</h2>\n<p>Most people scream and run when they see a demon. I stop and take notes on its anatomy.</p>",
                 "public": "<h1>Sage</h1><p>You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.</p><h2>Researcher</h2><p>When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign.</p><h1>Traits</h1><h2>Personality Traits</h2><p>There’s nothing I like more than a good mystery.</p><p>I … speak … slowly … when talking … to idiots, … which … almost … everyone … is … compared … to me.</p><h2>Ideals</h2><p>Knowledge. The path to power and self-improvement is through knowledge. (Neutral)</p><p>Power. Knowledge is the path to power and domination. (Evil)</p><h2>Bonds</h2><p>I sold my soul for knowledge. I hope to do great deeds and win it back.</p><h2>Flaws</h2><p>Most people scream and run when they see a demon. I stop and take notes on its anatomy.</p>"
             },
             "alignment": "Neutral Evil",
@@ -130,11 +130,11 @@
             "background": "Sage",
             "xp":
             {
-                "value": 3692,
+                "value": 4142,
                 "min": 0,
                 "max": 300
             },
-            "appearance": "",
+            "appearance": "Birthday: 5/18",
             "trait": "<p>There’s nothing I like more than a good mystery.</p><p>I … speak … slowly … when talking … to idiots, … which … almost … everyone … is … compared … to me.</p>",
             "ideal": "<p>Knowledge. The path to power and self-improvement is through knowledge. (Neutral)</p><p>Power. Knowledge is the path to power and domination. (Evil)</p>",
             "bond": "<p>I sold my soul for knowledge. I hope to do great deeds and win it back.</p>",
@@ -193,7 +193,7 @@
         "currency":
         {
             "pp": 0,
-            "gp": 109,
+            "gp": 102,
             "ep": 0,
             "sp": 0,
             "cp": 0
@@ -367,13 +367,13 @@
         {
             "spell1":
             {
-                "value": 3,
+                "value": 4,
                 "override": null,
                 "max": 3
             },
             "spell2":
             {
-                "value": 2,
+                "value": 3,
                 "override": 3,
                 "max": 0
             },
