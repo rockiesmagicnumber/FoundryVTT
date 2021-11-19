@@ -45,8 +45,8 @@ var characterDB = (function() {
     /**
      * Fetch ONE character item in the datastore
      */
-    
-    tdb.fetchOneCharacter=(charName,callback){
+
+    tdb.fetchOneCharacter = (charName, callback) {
         var db = datastore;
         var transaction = db.transaction(['character'], 'readwrite');
         var objStore = transaction.objectStore('character');

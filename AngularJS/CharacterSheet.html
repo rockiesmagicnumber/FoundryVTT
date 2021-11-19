@@ -13,12 +13,12 @@
         <form class="charsheet">
             <header>
                 <section class="charname">
-                    <label for="charname">Character Name</label><input name="charname" placeholder="Thoradin Fireforge" value="{{charName}}" />
+                    <label for="charname">Character Name</label><input name="charname" placeholder="Thoradin Fireforge" value="{{name}}" />
                 </section>
                 <section class="misc">
                     <ul>
                         <li>
-                            <label for="classlevel">Class & Level</label><input name="classlevel" placeholder="Paladin 2" value="{{classLevel()}}" />
+                            <label for="classlevel">Class & Level</label><input name="classlevel" placeholder="Paladin 2" value="{{class}} {{level}}" />
                         </li>
                         <li>
                             <label for="background">Background</label><input name="background" placeholder="Acolyte" value="{{background}}" />
@@ -45,50 +45,50 @@
                             <ul>
                                 <li>
                                     <div class="score">
-                                        <label for="Strengthscore">Strength</label><input name="Strengthscore" placeholder="10" value="{{myAbilities.str.value}}" />
+                                        <label for="Strengthscore">Strength</label><input name="Strengthscore" placeholder="10" value="{{abilities.str.score}}" />
                                     </div>
                                     <div class="modifier">
-                                        <input name="Strengthmod" placeholder="+0" value="{{myAbilities.str.mod}}" />
+                                        <input name="Strengthmod" placeholder="+0" value="{{abilities.str.mod}}" />
                                     </div>
                                 </li>
                                 <li>
                                     <div class="score">
-                                        <label for="Dexterityscore">Dexterity</label><input name="Dexterityscore" placeholder="10" value="{{myAbilities.dex.value}}" />
+                                        <label for="Dexterityscore">Dexterity</label><input name="Dexterityscore" placeholder="10" value="{{abilities.dex.score}}" />
                                     </div>
                                     <div class="modifier">
-                                        <input name="Dexteritymod" placeholder="+0" />
+                                        <input name="Dexteritymod" placeholder="+0" value="{{abilities.dex.mod}}" />
                                     </div>
                                 </li>
                                 <li>
                                     <div class="score">
-                                        <label for="Constitutionscore">Constitution</label><input name="Constitutionscore" placeholder="10" value="{{myAbilities.con.value}}" />
+                                        <label for="Constitutionscore">Constitution</label><input name="Constitutionscore" placeholder="10" value="{{abilities.con.score}}" />
                                     </div>
                                     <div class="modifier">
-                                        <input name="Constitutionmod" placeholder="+0" />
+                                        <input name="Constitutionmod" placeholder="+0" value="{{abilities.con.mod}}" />
                                     </div>
                                 </li>
                                 <li>
                                     <div class="score">
-                                        <label for="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" value="{{myAbilities.wis.value}}" />
+                                        <label for="Wisdomscore">Wisdom</label><input name="Wisdomscore" placeholder="10" value="{{abilities.wis.score}}" />
                                     </div>
                                     <div class="modifier">
-                                        <input name="Wisdommod" placeholder="+0" />
+                                        <input name="Wisdommod" placeholder="+0" value="{{abilities.wis.mod}}" />
                                     </div>
                                 </li>
                                 <li>
                                     <div class="score">
-                                        <label for="Intelligencescore">Intelligence</label><input name="Intelligencescore" placeholder="10" value="{{myAbilities.int.value}}" />
+                                        <label for="Intelligencescore">Intelligence</label><input name="Intelligencescore" placeholder="10" value="{{abilities.int.score}}" />
                                     </div>
                                     <div class="modifier">
-                                        <input name="Intelligencemod" placeholder="+0" />
+                                        <input name="Intelligencemod" placeholder="+0" value="{{abilities.int.mod}}" />
                                     </div>
                                 </li>
                                 <li>
                                     <div class="score">
-                                        <label for="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" value="{{myAbilities.cha.value}}" />
+                                        <label for="Charismascore">Charisma</label><input name="Charismascore" placeholder="10" value="{{abilities.cha.score}}" />
                                     </div>
                                     <div class="modifier">
-                                        <input name="Charismamod" placeholder="+0" />
+                                        <input name="Charismamod" placeholder="+0" value="{{abilities.cha.mod}}" />
                                     </div>
                                 </li>
                             </ul>
@@ -98,33 +98,33 @@
                                 <div class="label-container">
                                     <label for="inspiration">Inspiration</label>
                                 </div>
-                                <input name="inspiration" type="checkbox" />
+                                <input name="inspiration" type="checkbox" ng-checked="inspired"/>
                             </div>
                             <div class="proficiencybonus box">
                                 <div class="label-container">
                                     <label for="proficiencybonus">Proficiency Bonus</label>
                                 </div>
-                                <input name="proficiencybonus" placeholder="+2" />
+                                <input name="proficiencybonus" placeholder="+2" value="+{{profBonus}}" />
                             </div>
                             <div class="saves list-section box">
                                 <ul>
                                     <li>
-                                        <label for="Strength-save">Strength</label><input name="Strength-save" placeholder="+0" type="text" /><input name="Strength-save-prof" type="checkbox" />
+                                        <label for="Strength-save">Strength</label><input name="Strength-save" placeholder="+0" type="text" value="{{abilities.str.plusMinus}}{{abilities.str.savingThrow}}" /><input name="Strength-save-prof" type="checkbox" ng-checked="IsSavingThrow(abilities.str.proficient)" />
                                     </li>
                                     <li>
-                                        <label for="Dexterity-save">Dexterity</label><input name="Dexterity-save" placeholder="+0" type="text" /><input name="Dexterity-save-prof" type="checkbox" />
+                                        <label for="Dexterity-save">Dexterity</label><input name="Dexterity-save" placeholder="+0" type="text" value="{{abilities.dex.plusMinus}}{{abilities.dex.savingThrow}}" /><input name="Dexterity-save-prof" type="checkbox" ng-checked="abilities.dex.proficient" />
                                     </li>
                                     <li>
-                                        <label for="Constitution-save">Constitution</label><input name="Constitution-save" placeholder="+0" type="text" /><input name="Constitution-save-prof" type="checkbox" />
+                                        <label for="Constitution-save">Constitution</label><input name="Constitution-save" placeholder="+0" type="text" value="{{abilities.con.plusMinus}}{{abilities.con.savingThrow}}" /><input name="Constitution-save-prof" type="checkbox" ng-checked="abilities.con.proficient" />
                                     </li>
                                     <li>
-                                        <label for="Wisdom-save">Wisdom</label><input name="Wisdom-save" placeholder="+0" type="text" /><input name="Wisdom-save-prof" type="checkbox" />
+                                        <label for="Wisdom-save">Wisdom</label><input name="Wisdom-save" placeholder="+0" type="text" value="{{abilities.wis.plusMinus}}{{abilities.wis.savingThrow}}" /><input name="Wisdom-save-prof" type="checkbox" ng-checked="abilities.wis.proficient" />
                                     </li>
                                     <li>
-                                        <label for="Intelligence-save">Intelligence</label><input name="Intelligence-save" placeholder="+0" type="text" /><input name="Intelligence-save-prof" type="checkbox" />
+                                        <label for="Intelligence-save">Intelligence</label><input name="Intelligence-save" placeholder="+0" type="text" value="{{abilities.int.plusMinus}}{{abilities.int.savingThrow}}" /><input name="Intelligence-save-prof" type="checkbox" ng-checked="IsSavingThrow(abilities.int.proficient)" />
                                     </li>
                                     <li>
-                                        <label for="Charisma-save">Charisma</label><input name="Charisma-save" placeholder="+0" type="text" /><input name="Charisma-save-prof" type="checkbox" />
+                                        <label for="Charisma-save">Charisma</label><input name="Charisma-save" placeholder="+0" type="text" value="{{abilities.cha.plusMinus}}{{abilities.cha.savingThrow}}" /><input name="Charisma-save-prof" type="checkbox" ng-checked="abilities.cha.proficient" />
                                     </li>
                                 </ul>
                                 <div class="label">
@@ -198,7 +198,7 @@
                         <div class="label-container">
                             <label for="passiveperception">Passive Wisdom (Perception)</label>
                         </div>
-                        <input name="passiveperception" placeholder="10" />
+                        <input name="passiveperception" placeholder="10" value="{{passivePerception}}" />
                     </div>
                     <div class="otherprofs box textblock">
                         <label for="otherprofs">Other Proficiencies and Languages</label><textarea name="otherprofs"></textarea>
@@ -378,9 +378,9 @@
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-<script type="text/javascript" src="Scripts/db.js"></script>
+<!-- <script type="text/javascript" src="Scripts/db.js"></script> -->
 <script type="text/javascript" src="Scripts/TanwenExport.js"></script>
 <script type="text/javascript" src="Scripts/CharacterSheetController.js"></script>
-<script type="text/javascript" src="Scripts/CharacterExport.js"></script>
+<!-- <script type="text/javascript" src="Scripts/CharacterExport.js"></script> -->
 
 </html>
